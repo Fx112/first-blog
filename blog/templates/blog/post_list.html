@@ -3,10 +3,21 @@
       <title>Kevin's blog</title>
   </head>
 
+<div>
   <h1>Kevin's blog</h1>
+</div>
+
 <body>
+{% for post in posts %}
   <div>
+      <p>published: {{ post.published_date }}</p>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
+
+<div>
     <strong><a href="https://groceries.asda.com/product/nuggets-dippers-shapes/asda-free-from-12-bbq-chicken-dippers/910002332503">CLICK HERE FOR FREE CHICKEN DIPPERS</a></strong><br>
-  </div> 
+</div>
 </body>
 </html>
