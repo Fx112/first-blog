@@ -9,7 +9,10 @@
 
 <body>
     <div class="header">
-        <h1><strong><a href="/">Kevin's blog</a></strong></h1>
+      {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      {% endif %}
+      <h1><strong><a href="/">Kevin's blog</a></strong></h1>
     </div>
     <div class="content container">
         <div class="row">
